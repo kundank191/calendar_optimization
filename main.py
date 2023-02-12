@@ -1,7 +1,11 @@
-// create a djanjo app which renders a hello world page
-from django.http import HttpResponse
-from django.shortcuts import render
+// create a flask app that renders static/index.html
+from flask import Flask, render_template
+app = Flask(__name__, static_folder='static', static_url_path='')
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+@app.route('/')
+def index():
+    return render_template('index.html')
 
+if __name__ == '__main__':
+    app.run(debug=True)
+    
