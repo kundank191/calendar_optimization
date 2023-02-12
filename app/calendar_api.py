@@ -1,6 +1,6 @@
 from pathlib import Path
 
-def add_alarm_to_calender_events(filepath, num_day_before_notif = 0, num_hour_before_notif = 0, num_min_before_notif = 5, num_sec_before_notif = 0):
+def add_alarm_to_calender_events(filepath, num_day_before_notif=0, num_hour_before_notif=0, num_min_before_notif=5, num_sec_before_notif=0):
     """
     function will take an .ics file and then add notif to the file
     Args:

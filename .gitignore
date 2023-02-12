@@ -1,4 +1,9 @@
+# venvs wont be added to git
 venv/*
-__pycache__/*
 
+# pychache wont be added to git
+__pycache__/*
+app/__pycache__/*
+
+# logs wont be added to git
 logs/*
