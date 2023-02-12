@@ -1,5 +1,3 @@
-from pathlib import Path
-
 def add_alarm_to_calender_events(filepath, num_day_before_notif=0, num_hour_before_notif=0, num_min_before_notif=5, num_sec_before_notif=0):
     """
     function will take an .ics file and then add notif to the file
@@ -23,10 +21,12 @@ END:VEVENT
 
     to_replace = """END:VEVENT"""
 
-    data = Path(filepath).read_text()
+    with open(filepath, "r", encoding="utf-8") as file:
+        data = file.read()
 
     updated_file = data.replace(to_replace, alarm_schema)
 
-    Path(filepath).write_text(updated_file)
+    with open(filepath, "w", encoding="utf-8") as file:
+        file.write(updated_file)
 
     return {"status": "success", "message": "Alarm added to the calendar events"}
