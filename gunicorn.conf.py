@@ -3,8 +3,8 @@ import multiprocessing
 import os
 from logging.handlers import TimedRotatingFileHandler
 
-bind = ":5000"
-timeout = 5
+bind = ":8080"
+timeout = 500
 workers = multiprocessing.cpu_count()
 threads = 2
 errorlog = os.path.dirname(__file__) + "/logs/errorlog.log"
