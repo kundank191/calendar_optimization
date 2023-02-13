@@ -1,5 +1,6 @@
 # venvs wont be added to git
 venv/*
+uvenv/*
 
 # pychache wont be added to git
 __pycache__/*
