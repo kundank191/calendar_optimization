@@ -28,14 +28,17 @@ def update_calendar():
         constants.LOCATION_TO_SAVE_FILES + file_name.filename)
 
     # return the file to the user
-    return send_from_directory(constants.LOCATION_TO_SAVE_FILES, file_name.filename, as_attachment=True)
+    return send_from_directory(constants.LOCATION_TO_SAVE_FILES,
+                               file_name.filename,
+                               as_attachment=True)
 
 
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(info):
     """
     function will render the 404 page
     """
+    print(info)
     return render_template('index.html')
 
 
