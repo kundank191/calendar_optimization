@@ -15,3 +15,7 @@ Ufw setup
 * sudo ufw allow 80,443/tcp
 * tail -f /var/log/nginx/error.log
 
+nginx setup
+* ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+* destination is nginx ip address
+
