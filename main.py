@@ -30,6 +30,7 @@ def update_calendar():
     # return the file to the user
     return send_from_directory(constants.LOCATION_TO_SAVE_FILES, file_name.filename, as_attachment=True)
 
+
 @app.errorhandler(404)
 def page_not_found(e):
     """
@@ -39,4 +40,4 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0',port = '8080', debug=True)
+    app.run(host='0.0.0.0', port='8080', debug=True)
